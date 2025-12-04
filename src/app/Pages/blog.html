@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tastyc - Blog Culinario</title>
+    <link rel="stylesheet" href="../Css/blog.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <h1><a href="../Pages/inicio.html">Tastyc</a></h1>
+            <p>Food & Restaurant</p>
+        </div>
+        
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="../Pages/quensomos.html">ACERCA DE <span class="arrow">▼</span></a></li>
+                <li><a href="../Pages/menu.html">MENÚ <span class="arrow">▼</span></a></li>
+                <li><a href="../Pages/crearorden.html">ORDEN <span class="arrow">▼</span></a></li> 
+                <li class="active-link"><a href="../Pages/blog.html">BLOG <span class="arrow">▼</span></a></li>
+                <li><a href="../Pages/contacto.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <button class="btn-reservar">RESERVAR MESA</button>
+            <div class="icon-avatar">👤</div>
+        </div>
+    </header>
+
+    <main class="blog-hero-section">
+        <div class="hero-content">
+            <p class="greeting"><span class="orange-line"></span> NOVEDADES Y CONSEJOS.</p>
+            <h1>Nuestro Blog</h1>
+            <p class="subtitle">Descubre el mundo detrás de nuestros platos: recetas, entrevistas al chef y tendencias gastronómicas.</p>
+            
+            <div class="blog-search">
+                <input type="search" placeholder="Buscar artículos...">
+                <button type="submit" class="btn-search">🔍</button>
+            </div>
+        </div>
+    </main>
+
+    <section class="posts-grid-section">
+        
+        <a href="#" class="featured-post-card">
+            <div class="post-image-large"></div>
+            <div class="post-info-large">
+                <span class="post-tag">RECETA DEL CHEF</span>
+                <h2>Las 5 Técnicas Esenciales que Todo Cocinero Debe Dominar</h2>
+                <p>Aprende a desglasar, reducir y emulsionar como un profesional para llevar tus platos al siguiente nivel. Incluye un video tutorial.</p>
+                <div class="post-meta">
+                    <span>Por Admin</span> | <span>Octubre 20, 2025</span>
+                </div>
+            </div>
+        </a>
+
+        <div class="grid-title">
+            <h3>Últimas Publicaciones</h3>
+            <div class="separator"></div>
+        </div>
+
+        <div class="posts-grid">
+            
+            <a href="#" class="post-card">
+                <div class="post-image"></div>
+                <div class="post-content">
+                    <span class="post-tag">NOTICIAS</span>
+                    <h4>Tastyc Abre una Nueva Sucursal en el Centro Histórico</h4>
+                    <p>Conoce los detalles de nuestra emocionante expansión y el menú exclusivo para esta nueva ubicación.</p>
+                    <span class="read-more">Leer más →</span>
+                </div>
+            </a>
+
+            <a href="#" class="post-card">
+                <div class="post-image"></div>
+                <div class="post-content">
+                    <span class="post-tag">TENDENCIAS</span>
+                    <h4>El Auge de la Cocina Basada en Plantas</h4>
+                    <p>Analizamos cómo la gastronomía vegana y vegetariana está redefiniendo el futuro de la alimentación.</p>
+                    <span class="read-more">Leer más →</span>
+                </div>
+            </a>
+
+            <a href="#" class="post-card">
+                <div class="post-image"></div>
+                <div class="post-content">
+                    <span class="post-tag">ENTREVISTA</span>
+                    <h4>Hablamos con la Sommelier María Paz</h4>
+                    <p>Descubre el arte del maridaje y las mejores combinaciones para nuestros platos fuertes.</p>
+                    <span class="read-more">Leer más →</span>
+                </div>
+            </a>
+            
+            </div>
+        
+        <div class="pagination">
+            <button class="page-link active">1</button>
+            <button class="page-link">2</button>
+            <button class="page-link">3</button>
+            <button class="page-link">Siguiente</button>
+        </div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tastyc - Reservar Mesa</title>
+    <link rel="stylesheet" href="../Css/reserva.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <h1><a href="../Pages/inicio.html">Tastyc</a></h1>
+            <p>Food & Restaurant</p>
+        </div>
+        
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="../Pages/quensomos.html">ACERCA DE <span class="arrow">▼</span></a></li>
+                <li><a href="../Pages/menu.html">MENÚ <span class="arrow">▼</span></a></li>
+                <li><a href="../Pages/crearorden.html">ORDEN <span class="arrow">▼</span></a></li> 
+                <li><a href="../Pages/blog.html">BLOG <span class="arrow">▼</span></a></li>
+                <li><a href="../Pages/contacto.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <button class="btn-reservar active-btn">RESERVAR MESA</button>
+            <div class="icon-avatar">👤</div>
+        </div>
+    </header>
+
+    <main class="reservation-section">
+        
+        <div class="reservation-container">
+            
+            <div class="form-column">
+                <div class="title-container">
+                    <p class="greeting"><span class="orange-line"></span> ASEGURA TU LUGAR.</p>
+                    <a href="../Pages/Reservar.html"><h2>Reservación de Mesa</h2></a>
+                    <p class="subtitle">Utiliza nuestro formulario para seleccionar la fecha, hora y número de personas. Recibirás una confirmación por correo electrónico.</p>
+                </div>
+
+                <form class="reservation-form">
+                    
+                    <div class="form-group-triple">
+                        <div class="form-group">
+                            <label for="date">Fecha</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Hora</label>
+                            <select id="time" name="time" required>
+                                <option value="" disabled selected>Selecciona hora</option>
+                                <option value="18:00">18:00</option>
+                                <option value="19:30">19:30</option>
+                                <option value="21:00">21:00</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Personas</label>
+                            <input type="number" id="guests" name="guests" min="1" max="10" placeholder="2" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group-double">
+                        <div class="form-group">
+                            <label for="name">Nombre Completo</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Teléfono de Contacto</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico (Para confirmación)</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Notas o Peticiones Especiales (ej. alérgenos)</label>
+                        <textarea id="notes" name="notes" rows="3" placeholder="Silla de bebé, ubicación silenciosa..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit-reservation">CONFIRMAR RESERVA</button>
+                </form>
+            </div>
+
+            <div class="info-column">
+                <h3>Horarios Disponibles</h3>
+                <div class="schedule-info">
+                    <div class="day-time">
+                        <h4>Lunes a Jueves</h4>
+                        <p>18:00 - 22:30</p>
+                    </div>
+                    <div class="day-time">
+                        <h4>Viernes y Sábado</h4>
+                        <p>17:30 - 23:30</p>
+                    </div>
+                    <div class="day-time closed">
+                        <h4>Domingo</h4>
+                        <p>Cerrado</p>
+                    </div>
+                </div>
+
+                <div class="tip-box">
+                    <span>💡 Consejo:</span> Para reservas de más de 10 personas, por favor llámanos directamente al 555-123-456.
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+</body>
+</html>

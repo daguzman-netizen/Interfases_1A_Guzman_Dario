@@ -1,0 +1,211 @@
+/* Variables de color (Mismos que las páginas anteriores) */
+:root {
+    --color-dark-bg: #22252a; 
+    --color-light-text: #fff; 
+    --color-orange: #ff8c00; 
+    --color-header-bg: rgba(34, 37, 42, 0.9); 
+    --color-section-bg: #1c1f23; /* Fondo ligeramente más oscuro para algunas secciones */
+    --font-primary: 'Poppins', sans-serif;
+}
+
+/* ------------------- ESTILOS BASE Y HEADER ------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-dark-bg);
+    color: var(--color-light-text);
+    min-height: 100vh;
+}
+
+a { text-decoration: none; color: var(--color-light-text); }
+ul { list-style: none; }
+
+/* HEADER (Estilos reutilizados) */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: var(--color-header-bg); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.logo h1 { font-size: 24px; font-weight: 700; line-height: 1; }
+.logo p { font-size: 10px; margin-top: -3px; color: var(--color-orange); letter-spacing: 1px; text-transform: uppercase; }
+
+.nav-links { display: flex; gap: 30px; font-size: 14px; font-weight: 600; }
+.nav-links a:hover, .active-link a { color: var(--color-orange); } 
+.arrow { font-size: 10px; margin-left: 5px; }
+
+.header-actions { display: flex; align-items: center; gap: 20px; }
+.btn-reservar {
+    background-color: var(--color-orange);
+    color: var(--color-light-text);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.icon-avatar { font-size: 24px; cursor: pointer; color: #fff; }
+
+/* Línea de acento (reutilizada) */
+.orange-line {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--color-orange);
+    margin-right: 10px;
+}
+
+/* ------------------- 2. SECCIÓN HERO ACERCA DE ------------------- */
+.about-hero-section {
+    background-image: url('placeholder-dark-wood.jpg'); /* Fondo sutil de textura oscura */
+    background-size: cover;
+    background-position: center;
+    padding: 150px 50px 100px;
+    text-align: center;
+    border-bottom: 5px solid var(--color-orange);
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.greeting {
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.about-hero-section h1 {
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ccc;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ------------------- 3. SECCIÓN HISTORIA ------------------- */
+.story-section {
+    display: flex;
+    padding: 80px 50px;
+    gap: 50px;
+    align-items: center;
+    background-color: var(--color-section-bg);
+}
+
+.content-text {
+    flex: 1;
+    max-width: 50%;
+}
+
+.content-text h2 {
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--color-orange);
+    margin-bottom: 20px;
+}
+
+.content-text p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.content-image {
+    flex: 1;
+    min-height: 400px;
+    /* Placeholder de la imagen */
+    background-image: url('placeholder-kitchen-scene.jpg'); 
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.btn-read-more {
+    background: none;
+    border: 2px solid var(--color-orange);
+    color: var(--color-orange);
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-read-more:hover {
+    background-color: var(--color-orange);
+    color: var(--color-light-text);
+}
+
+/* ------------------- 4. SECCIÓN VALORES ------------------- */
+.values-section {
+    padding: 80px 50px;
+    text-align: center;
+    background-color: var(--color-dark-bg);
+}
+
+.values-section h2 {
+    font-size: 36px;
+    color: var(--color-light-text);
+    margin-bottom: 40px;
+}
+
+.values-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.value-card {
+    background-color: var(--color-section-bg);
+    padding: 30px;
+    border-radius: 5px;
+    width: 250px;
+    border-left: 3px solid var(--color-orange);
+    transition: transform 0.3s;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+}
+
+.value-card h3 {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--color-orange);
+    margin-bottom: 5px;
+}
+
+.value-card p {
+    font-size: 16px;
+    color: #ccc;
+    font-weight: 500;
+}

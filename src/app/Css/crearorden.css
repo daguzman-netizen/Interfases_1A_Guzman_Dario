@@ -1,0 +1,281 @@
+/* Variables de color (Mismos que la página de inicio) */
+:root {
+    --color-dark-bg: #22252a; 
+    --color-light-text: #fff; 
+    --color-orange: #ff8c00; 
+    --color-header-bg: rgba(34, 37, 42, 0.9); 
+    --color-detail-bg: #33363b; /* Fondo para los items del menú/carrito */
+    --color-summary-bg: #1c1f23; /* Fondo más oscuro para el resumen */
+    --font-primary: 'Poppins', sans-serif;
+}
+
+/* ------------------- ESTILOS BASE Y HEADER ------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-dark-bg);
+    color: var(--color-light-text);
+    min-height: 100vh;
+}
+
+a { text-decoration: none; color: var(--color-light-text); }
+ul { list-style: none; }
+
+/* HEADER (Estilos reutilizados) */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: var(--color-header-bg); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.logo h1 { font-size: 24px; font-weight: 700; line-height: 1; }
+.logo p { font-size: 10px; margin-top: -3px; color: var(--color-orange); letter-spacing: 1px; text-transform: uppercase; }
+
+.nav-links { display: flex; gap: 30px; font-size: 14px; font-weight: 600; }
+.nav-links a:hover, .active-link a { color: var(--color-orange); } 
+.arrow { font-size: 10px; margin-left: 5px; }
+
+.header-actions { display: flex; align-items: center; gap: 20px; }
+.btn-reservar {
+    background-color: var(--color-orange);
+    color: var(--color-light-text);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.icon-avatar { font-size: 24px; cursor: pointer; color: #fff; }
+
+
+/* ------------------- 2. SECCIÓN DE LA ORDEN ------------------- */
+.order-section {
+    padding: 80px 50px;
+}
+
+/* Título de la Sección */
+.title-container {
+    margin-bottom: 50px;
+}
+
+.greeting {
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.orange-line {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--color-orange);
+    margin-right: 10px;
+}
+
+.title-container h2 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+/* Contenedor principal: Carrito y Resumen */
+.order-container {
+    display: flex;
+    gap: 40px;
+}
+
+/* COLUMNA IZQUIERDA: ITEMS DEL CARRITO */
+.order-items {
+    flex: 2; /* Ocupa más espacio */
+}
+
+.order-items h3 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: var(--color-orange);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 15px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-detail-bg);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.item-details h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: var(--color-light-text);
+}
+
+.item-details p {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.item-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.price-total {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-orange);
+}
+
+.btn-remove {
+    background: none;
+    border: 1px solid #777;
+    color: #777;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 0.2s;
+}
+
+.btn-remove:hover {
+    background-color: #f00;
+    border-color: #f00;
+    color: #fff;
+}
+
+.continue-shopping {
+    display: inline-block;
+    margin-top: 10px;
+    color: #ccc;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.continue-shopping:hover {
+    color: var(--color-orange);
+}
+
+
+/* COLUMNA DERECHA: RESUMEN */
+.order-summary {
+    flex: 1; /* Ocupa menos espacio */
+    background-color: var(--color-summary-bg);
+    padding: 30px;
+    border-radius: 5px;
+    align-self: flex-start; /* Asegura que no se estire */
+}
+
+.order-summary h3 {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: var(--color-light-text);
+    padding-bottom: 10px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.summary-line span {
+    font-weight: 400;
+    color: #ccc;
+}
+
+.summary-line .amount {
+    font-weight: 600;
+    color: var(--color-light-text);
+}
+
+.summary-line.total {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.summary-line.total span {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-orange);
+}
+
+.total-amount {
+    color: var(--color-orange) !important;
+}
+
+/* Campo de Código Promocional */
+.promo-code {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.promo-code input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #555;
+    background-color: #333;
+    color: #fff;
+    border-radius: 3px;
+    font-family: inherit;
+}
+
+.btn-apply {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-apply:hover {
+    background-color: #777;
+}
+
+/* Botón de Checkout */
+.btn-checkout {
+    width: 100%;
+    background-color: var(--color-orange);
+    color: var(--color-light-text);
+    border: none;
+    padding: 15px;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-checkout:hover {
+    background-color: #e57e00;
+}

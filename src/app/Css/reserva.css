@@ -1,0 +1,241 @@
+/* Variables de color (Mismos que las páginas anteriores) */
+:root {
+    --color-dark-bg: #22252a; 
+    --color-light-text: #fff; 
+    --color-orange: #ff8c00; 
+    --color-header-bg: rgba(34, 37, 42, 0.9); 
+    --color-form-bg: #1c1f23; /* Fondo principal de la reserva */
+    --color-input-bg: #2a2e33; /* Fondo para campos de texto */
+    --font-primary: 'Poppins', sans-serif;
+}
+
+/* ------------------- ESTILOS BASE Y HEADER ------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-dark-bg);
+    color: var(--color-light-text);
+    min-height: 100vh;
+}
+
+a { text-decoration: none; color: var(--color-light-text); }
+ul { list-style: none; }
+
+/* HEADER (Estilos reutilizados) */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: var(--color-header-bg); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.logo h1 { font-size: 24px; font-weight: 700; line-height: 1; }
+.logo p { font-size: 10px; margin-top: -3px; color: var(--color-orange); letter-spacing: 1px; text-transform: uppercase; }
+
+.nav-links { display: flex; gap: 30px; font-size: 14px; font-weight: 600; }
+.nav-links a:hover { color: var(--color-orange); } 
+.arrow { font-size: 10px; margin-left: 5px; }
+
+.header-actions { display: flex; align-items: center; gap: 20px; }
+.btn-reservar {
+    background-color: var(--color-orange);
+    color: var(--color-light-text);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.btn-reservar.active-btn {
+    background-color: #e57e00; /* Ligeramente más oscuro si es la página activa */
+}
+.icon-avatar { font-size: 24px; cursor: pointer; color: #fff; }
+
+/* Línea de acento y título (reutilizada) */
+.orange-line {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--color-orange);
+    margin-right: 10px;
+}
+
+/* ------------------- 2. SECCIÓN DE RESERVA ------------------- */
+.reservation-section {
+    padding: 80px 50px;
+    background-color: var(--color-dark-bg);
+}
+
+.reservation-container {
+    display: flex;
+    gap: 50px;
+    background-color: var(--color-form-bg);
+    padding: 50px;
+    border-radius: 8px;
+}
+
+/* COLUMNA IZQUIERDA: Formulario */
+.form-column {
+    flex: 3; 
+}
+
+.title-container {
+    margin-bottom: 30px;
+}
+
+.title-container h2 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #ccc;
+}
+
+.reservation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group, .form-group-triple, .form-group-double {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.form-group > *, .form-group-triple > .form-group, .form-group-double > .form-group {
+    flex: 1; /* Distribuye el espacio uniformemente en los grupos de múltiples columnas */
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #ccc;
+    display: block;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid #444;
+    background-color: var(--color-input-bg);
+    color: var(--color-light-text);
+    border-radius: 3px;
+    font-family: inherit;
+    font-size: 16px;
+    width: 100%;
+    transition: border-color 0.3s;
+    /* Ajuste para los select/date inputs en dark mode */
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z' clip-rule='evenodd' /%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.7em top 50%, 0 0;
+    background-size: 0.65em auto, 100%;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--color-orange);
+    outline: none;
+}
+
+/* Estilo específico para el botón de submit */
+.btn-submit-reservation {
+    background-color: var(--color-orange);
+    color: var(--color-light-text);
+    border: none;
+    padding: 15px;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit-reservation:hover {
+    background-color: #e57e00;
+}
+
+/* COLUMNA DERECHA: Instrucciones y Horarios */
+.info-column {
+    flex: 2; 
+    padding: 20px;
+    background-color: #33363b; /* Fondo diferente para el contraste */
+    border-radius: 5px;
+    align-self: stretch; /* Estira la columna para que tenga la misma altura que el formulario */
+}
+
+.info-column h3 {
+    font-size: 24px;
+    color: var(--color-light-text);
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.schedule-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.day-time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.day-time h4 {
+    font-size: 16px;
+    color: var(--color-orange);
+    font-weight: 600;
+}
+
+.day-time p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.day-time.closed h4, .day-time.closed p {
+    color: #f00; /* Rojo para indicar cerrado */
+}
+
+.tip-box {
+    padding: 15px;
+    border: 1px solid var(--color-orange);
+    background-color: rgba(255, 140, 0, 0.1);
+    border-radius: 5px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.tip-box span {
+    font-weight: 700;
+    color: var(--color-orange);
+    margin-right: 5px;
+}

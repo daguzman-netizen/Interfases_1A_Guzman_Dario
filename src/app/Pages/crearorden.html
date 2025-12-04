@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tastyc - Realizar Orden</title>
+    <link rel="stylesheet" href="../Css/crearorden.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <h1><a href="../Pages/inicio.html">Tastyc</a></h1>
+            <p>Food & Restaurant</p>
+        </div>
+        
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="../Pages/quensomos.html">ACERCA DE <span class="arrow">▼</span></a></li>
+                <li><a href="../Pages/menu.html">MENÚ <span class="arrow">▼</span></a></li>
+                <li class="active-link"><a href="../Pages/crearorden.html">ORDEN <span class="arrow">▼</span></a></li> 
+                <li><a href="../Pages/blog.html">BLOG <span class="arrow">▼</span></a></li>
+                <li><a href="../Pages/contacto.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <button class="btn-reservar">RESERVAR MESA</button>
+            <div class="icon-avatar">👤</div>
+        </div>
+    </header>
+
+    <main class="order-section">
+        <div class="title-container">
+            <p class="greeting"><span class="orange-line"></span> DETALLES DEL PEDIDO.</p>
+            <h2>Tu Orden</h2>
+        </div>
+
+        <div class="order-container">
+            
+            <div class="order-items">
+                <h3>🛒 Productos Seleccionados</h3>
+                
+                <div class="cart-item">
+                    <div class="item-details">
+                        <h4>Tacos de Pescado (x2)</h4>
+                        <p>Adicional: Salsa extra picante</p>
+                    </div>
+                    <div class="item-actions">
+                        <span class="price-total">$32.00</span>
+                        <button class="btn-remove">X</button>
+                    </div>
+                </div>
+
+                <div class="cart-item">
+                    <div class="item-details">
+                        <h4>Ensalada de Quinoa Fresca (x1)</h4>
+                        <p>Sin aderezo cítrico</p>
+                    </div>
+                    <div class="item-actions">
+                        <span class="price-total">$12.50</span>
+                        <button class="btn-remove">X</button>
+                    </div>
+                </div>
+                
+                <a href="#" class="continue-shopping">← Continuar Añadiendo Platos</a>
+            </div>
+
+            <div class="order-summary">
+                <h3>💰 Resumen del Pedido</h3>
+                
+                <div class="summary-line">
+                    <span>Subtotal:</span>
+                    <span class="amount">$44.50</span>
+                </div>
+                <div class="summary-line">
+                    <span>Costo de Envío:</span>
+                    <span class="amount">$5.00</span>
+                </div>
+                <div class="summary-line promo-code">
+                    <input type="text" placeholder="Código Promocional">
+                    <button class="btn-apply">Aplicar</button>
+                </div>
+                
+                <div class="summary-line total">
+                    <span>Total a Pagar:</span>
+                    <span class="amount total-amount">$49.50</span>
+                </div>
+                
+                <button class="btn-checkout">PAGAR AHORA</button>
+            </div>
+            
+        </div>
+    </main>
+
+</body>
+</html>

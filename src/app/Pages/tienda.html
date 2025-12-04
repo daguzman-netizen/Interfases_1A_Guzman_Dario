@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tastyc - Tienda en Línea</title>
+    <link rel="stylesheet" href="../Css/tienda.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <h1><a href="../Pages/inicio.html">Tastyc</a></h1>
+            <p>Food & Restaurant</p>
+        </div>
+        
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="../Pages/quensomos.html">ACERCA DE <span class="arrow">▼</span></a></li>
+                <li><a href="../Pages/menu.html">MENÚ <span class="arrow">▼</span></a></li>
+                <li class="active-link"><a href="../Pages/tienda.html">TIENDA EN LÍNEA <span class="arrow">▼</span></a></li> 
+                <li><a href="../Pages/blog.html">BLOG <span class="arrow">▼</span></a></li>
+                <li><a href="../Pages/contacto.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <button class="btn-reservar">RESERVAR MESA</button>
+            <div class="icon-avatar">👤</div>
+            <div class="icon-cart">🛒<span class="cart-count">3</span></div>
+        </div>
+    </header>
+
+    <main class="shop-hero-section">
+        <div class="hero-content">
+            <p class="greeting"><span class="orange-line"></span> LLÉVATE EL SABOR A CASA.</p>
+            <h1>Nuestra Tienda</h1>
+            
+            <div class="shop-filters">
+                <select class="filter-dropdown">
+                    <option value="todos">Todos los Productos</option>
+                    <option value="salsas">Salsas Artesanales</option>
+                    <option value="kits">Kits de Comida</option>
+                    <option value="merch">Merchandising</option>
+                </select>
+                <div class="product-count">
+                    Mostrando **1-9** de **25** productos
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="products-grid-section">
+        
+        <div class="products-grid">
+            
+            <div class="product-card">
+                <div class="product-image"></div>
+                <div class="product-content">
+                    <span class="product-tag">🔥 Más Vendido</span>
+                    <h4>Salsa Picante del Chef (Edición Limitada)</h4>
+                    <p class="product-price">$18.99</p>
+                    <button class="btn-add-to-cart">Añadir al Carrito</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image"></div>
+                <div class="product-content">
+                    <span class="product-tag">Novedad</span>
+                    <h4>Kit para Tacos Gourmet (2 personas)</h4>
+                    <p class="product-price">$35.00</p>
+                    <button class="btn-add-to-cart">Añadir al Carrito</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image"></div>
+                <div class="product-content">
+                    <span class="product-tag">Merchandising</span>
+                    <h4>Gorra Tastyc Logo Premium</h4>
+                    <p class="product-price">$25.99</p>
+                    <button class="btn-add-to-cart">Añadir al Carrito</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image"></div>
+                <div class="product-content">
+                    <span class="product-tag">Salsas</span>
+                    <h4>Aderezo de Cilantro y Lima</h4>
+                    <p class="product-price">$12.50</p>
+                    <button class="btn-add-to-cart">Añadir al Carrito</button>
+                </div>
+            </div>
+
+            </div>
+        
+        <div class="pagination">
+            <button class="page-link active">1</button>
+            <button class="page-link">2</button>
+            <button class="page-link">3</button>
+        </div>
+    </section>
+
+</body>
+</html>
