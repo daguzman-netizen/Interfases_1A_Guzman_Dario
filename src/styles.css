@@ -1,1 +1,312 @@
-/* You can add global styles to this file, and also import other style files */
+/* Variables de color para fácil mantenimiento */
+:root {
+    --color-dark-bg: #22252a; /* Fondo muy oscuro, casi negro */
+    --color-dark-text: #666; /* Texto gris oscuro */
+    --color-light-text: #fff; /* Texto principal claro */
+    --color-orange: #ff8c00; /* Naranja de acento */
+    --color-header-bg: rgba(34, 37, 42, 0.9); /* Fondo semitransparente para el header */
+    --font-primary: 'Poppins', sans-serif;
+}
+
+/* ------------------- ESTILOS BASE ------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-dark-bg);
+    color: var(--color-light-text);
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-light-text);
+}
+
+ul {
+    list-style: none;
+}
+
+/* ------------------- 1. HEADER ------------------- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    position: fixed; /* Fijo en la parte superior */
+    width: 100%;
+    z-index: 100;
+    background-color: var(--color-header-bg); /* Fondo sutilmente oscuro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1;
+}
+
+.logo p {
+    font-size: 10px;
+    margin-top: -3px;
+    color: var(--color-orange);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Navegación (Links) */
+.nav-links {
+    display: flex;
+    gap: 30px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: var(--color-orange);
+}
+
+.arrow {
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+/* Botones de Acción */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-reservar {
+    background-color: var(--color-orange);
+    color: var(--color-light-text);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.btn-reservar:hover {
+    background-color: #e57e00;
+}
+
+.icon-avatar {
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* ------------------- 2. SECCIÓN HERO ------------------- */
+.hero-section {
+    position: relative;
+    display: flex;
+    min-height: 100vh;
+    padding-top: 100px; /* Espacio para el header fijo */
+    overflow: hidden;
+}
+
+.hero-content {
+    width: 50%;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Fondo oscuro con textura (simulado) */
+    background-image: url('placeholder-dark-texture.jpg'); /* Reemplazar con imagen real */
+    background-color: var(--color-dark-bg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Saludo */
+.greeting {
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff; /* Blanco */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.orange-line {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: var(--color-orange);
+    margin-right: 10px;
+}
+
+/* Título principal */
+.hero-content h2 {
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+/* Subtítulo */
+.subtitle {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ccc;
+    max-width: 450px;
+    margin-bottom: 40px;
+}
+
+/* Botones CTA */
+.cta-buttons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.btn-primary {
+    background-color: var(--color-orange);
+    color: var(--color-light-text);
+    border: none;
+    padding: 15px 35px;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #e57e00;
+}
+
+.btn-secondary {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.btn-secondary::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--color-light-text);
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+/* Puntos del Slider */
+.slider-controls {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    width: 10px;
+    height: 10px;
+    background-color: var(--color-light-text);
+    border: 2px solid var(--color-orange);
+}
+
+/* Icono de la cámara */
+.camera-icon {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    padding: 8px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    font-size: 18px;
+}
+
+/* Contenedor de la Imagen Derecha */
+.hero-image-container {
+    width: 50%;
+    /* Reemplazar con tu imagen. Ajusta background-size y position según la imagen real */
+    background-image: url('placeholder-food-skewers.png'); /* Reemplazar con imagen real */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    /* Oscurece un poco la imagen de fondo si es necesario para el contraste */
+    /* filter: brightness(0.9); */
+}
+
+/* Flechas de Navegación del Slider */
+.slider-arrows {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.arrow-left, .arrow-right {
+    display: block;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.arrow-left::before, .arrow-right::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* Simulación de flecha: Usa un triángulo o un icono real */
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.arrow-right::before {
+    transform: translate(-60%, -50%) rotate(-45deg);
+}
+
+.arrow-left::before {
+    /* Esta flecha no es visible en la imagen, pero se incluye por coherencia */
+    transform: translate(-40%, -50%) rotate(135deg);
+}
+
+.menu-hero-image {
+    width: 45%;
+    height: 380px;
+    background-image: url(https://images.unsplash.com/photo-1600891964599-f61ba0e24092?q=80&w=1200);
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+}

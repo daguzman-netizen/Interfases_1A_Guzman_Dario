@@ -1,13 +1,67 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <meta charset="utf-8">
-  <title>Restaurante</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tastyc - Reserva tu Mesa</title>
+    <link rel="stylesheet" href="../src/app/Css/inicio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <app-root></app-root>
+
+    <header class="header">
+        <div class="logo">
+            <h1><a href="../src/app/Pages/inicio.html">Tastyc</a></h1>
+            <p>Food & Restaurant</p>
+        </div>
+        
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="../src/app/Pages/quensomos.html">ACERCA DE <span class="arrow">▼</span></a></li>
+                <li><a href="../src/app/Pages/menu.html">MENÚ <span class="arrow">▼</span></a></li>
+                <li><a href="../src/app/Pages/crearorden.html">ORDEN <span class="arrow">▼</span></a></li>
+                <li><a href="../src/app/Pages/blog.html">BLOG <span class="arrow">▼</span></a></li>
+                <li><a href="../src/app/Pages/contacto.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <button class="btn-reservar">RESERVAR MESA</button>
+            <div class="icon-avatar">👤</div>
+        </div>
+    </header>
+
+    <main class="hero-section">
+        <div class="hero-content">
+            <p class="greeting"><span class="orange-line"></span> HOLA, NUEVO AMIGO.</p>
+            <h2>Reserva tu <br>Mesa</h2>
+            <p class="subtitle">Quaerat debitis, tercia, sapiente dicta sequi labore porro pariatur harum expedita.</p>
+            
+            <div class="cta-buttons">
+                <button class="btn-primary"><a href="../src/app/Pages/Reservar.html">RESERVACIÓN</a></button>
+                <a href="../src/app/Pages/tienda.html" class="btn-secondary">TIENDA EN LÍNEA</a>
+            </div>
+
+            <div class="slider-controls">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            
+            <div class="camera-icon">📷</div>
+        </div>
+
+        <div class="hero-image-container">
+            <div class="menu-hero-image">
+            </div>
+            </div>
+
+        <div class="slider-arrows">
+            <span class="arrow-left"></span>
+            
+            <span class="arrow-right"></span>
+        </div>
+    </main>
+
 </body>
 </html>
